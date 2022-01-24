@@ -1,4 +1,2 @@
-# software_project_group_5
-Still working on it
-test
-#Lit
+# Mojito
+A modern approach to a classic web app
