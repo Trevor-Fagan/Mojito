@@ -8,12 +8,12 @@ const Sidebar = () => {
     </div>
 
     <ul>
-      <Link to='/dashboard'>Dashboard</Link>
+      <Link to='/'>Dashboard</Link>
       <Link to='/budget'>Budget</Link>
       <Link to='/transaction_history'>Transaction History</Link>
       <Link to='/expenses'>Expenses</Link>
       <Link to='/investments'>Investments</Link>
-      <Link to='/spedning_analyzer'>Spending Analyzer</Link>
+      <Link to='/spending_analyzer'>Spending Analyzer</Link>
     </ul>
 
     <div className='account_info'>
