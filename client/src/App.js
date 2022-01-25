@@ -11,17 +11,17 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 function App() {
   return (
     <Router>
-      <div className='container'>
         <Sidebar />
-        <Switch>
-          <Route path='/' exact component={Dashboard} />
-          <Route path='/budget' component={Budget} />
-          <Route path='/transaction_history' component={TransactionHistory} />
-          <Route path='/expenses' component={Expenses} />
-          <Route path='/investments' component={Investments} />
-          <Route path='/spending_analyzer' component={SpendingAnalyzer} />
-        </Switch>
-      </div>
+        <div className='container w-5/6'>
+          <Switch>
+            <Route path='/' exact component={Dashboard} />
+            <Route path='/budget' component={Budget} />
+            <Route path='/transaction_history' component={TransactionHistory} />
+            <Route path='/expenses' component={Expenses} />
+            <Route path='/investments' component={Investments} />
+            <Route path='/spending_analyzer' component={SpendingAnalyzer} />
+          </Switch>
+        </div>
     </Router>
   );
 }

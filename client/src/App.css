@@ -11,6 +11,7 @@ body {
   background-color: #f4f7fd;
 }
 
-.logo {
-  margin: 10px;
+.container {
+  padding: 20px;
+  float: left;
 }
