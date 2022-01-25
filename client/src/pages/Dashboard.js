@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import '../styles/Dashboard.css'
 
 const Dashboard = () => {
-  return <div className='dashboard w-5/6'>
+  return <div className='dashboard w-full'>
     <div className='overview_bar w-full'>
       <h2>Overview</h2>
 
