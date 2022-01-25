@@ -1,8 +1,6 @@
 .sidebar {
     float: left;
     border-right: 2px solid gray;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
     background: rgb(150,156,198);
     background: linear-gradient(0deg, rgba(150,156,198,1) 0%, rgba(115,154,219,1) 100%);
     color: #DBDBDB;
@@ -12,9 +10,20 @@
     
 }
 
+.sidebar ul li {
+
+}
+
 .logo {
     text-align: center;
     margin-top: 20px;
+    margin-left: -10%;
+}
+
+.logo_img {
+    width: 50px;
+    display: inline-block;
+    margin-top: -10px;
 }
 
 .selected {
