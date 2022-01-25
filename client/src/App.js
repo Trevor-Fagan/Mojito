@@ -8,6 +8,7 @@ import TransactionHistory from '../src/pages/TransactionHistory';
 import SpendingAnalyzer from '../src/pages/SpendingAnalyzer';
 import Account from '../src/pages/Account';
 import SignOut from '../src/pages/SignOut';
+import Income from '../src/pages/Income';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
             <Route path='/spending_analyzer' component={SpendingAnalyzer} />
             <Route path='/my_account' component={Account}></Route>
             <Route path='/sign_out' component={SignOut}></Route>
+            <Route path='/income' component={Income}></Route>
           </Switch>
         </div>
     </Router>

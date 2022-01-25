@@ -18,6 +18,7 @@ const Sidebar = () => {
           <li><NavLink activeStyle={{color: '#FFF'}} exact to='/'><LayoutOutlined /><span className='text_icon_padding'>Dashboard</span></NavLink></li>
           <li><NavLink activeStyle={{color: '#FFF'}} to='/budget'><DollarOutlined /><span className='text_icon_padding'>Budget</span></NavLink></li>
           <li><NavLink activeStyle={{color: '#FFF'}} to='/transaction_history'><HistoryOutlined /><span className='text_icon_padding'>Transaction History</span></NavLink></li>
+          <li><NavLink activeStyle={{color: '#FFF'}} to='/income'><TagOutlined /><span className='text_icon_padding'>Income</span></NavLink></li>
           <li><NavLink activeStyle={{color: '#FFF'}} to='/expenses'><TagOutlined /><span className='text_icon_padding'>Expenses</span></NavLink></li>
           <li><NavLink activeStyle={{color: '#FFF'}} to='/investments'><LineChartOutlined /><span className='text_icon_padding'>Investments</span></NavLink></li>
           <li><NavLink activeStyle={{color: '#FFF'}} to='/spending_analyzer'><PieChartOutlined /><span className='text_icon_padding'>Spending Analyzer</span></NavLink></li>
