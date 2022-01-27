@@ -8,13 +8,16 @@ import TransactionHistory from '../src/pages/TransactionHistory';
 import SpendingAnalyzer from '../src/pages/SpendingAnalyzer';
 import Account from '../src/pages/Account';
 import SignOut from '../src/pages/SignOut';
+import Income from '../src/pages/Income';
+import SignUp from '../src/pages/SignUp';
+import SignIn from '../src/pages/SignIn';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 function App() {
   return (
     <Router>
         <Sidebar />
-        <div className='container w-5/6'>
+        <div className='container w-full'>
           <Switch>
             <Route path='/' exact component={Dashboard} />
             <Route path='/budget' component={Budget} />
@@ -24,6 +27,9 @@ function App() {
             <Route path='/spending_analyzer' component={SpendingAnalyzer} />
             <Route path='/my_account' component={Account}></Route>
             <Route path='/sign_out' component={SignOut}></Route>
+            <Route path='/income' component={Income}></Route>
+            <Route path='/sign_up' component={SignUp}></Route>
+            <Route path='/sign_in' component={SignIn}></Route>
           </Switch>
         </div>
     </Router>

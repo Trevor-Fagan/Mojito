@@ -1,10 +1,11 @@
 import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
+import WelcomeUser from './WelcomeUser';
 import '../styles/Sidebar.css';
 import { LayoutOutlined, DollarOutlined, HistoryOutlined, TagOutlined, LineChartOutlined, PieChartOutlined,
-  TwitterOutlined, InstagramOutlined, LinkedinOutlined, FacebookOutlined,
-  UserOutlined, LogoutOutlined } from '@ant-design/icons';
+  TwitterOutlined, InstagramOutlined, LinkedinOutlined, FacebookOutlined } from '@ant-design/icons';
 import Logo from '../images/mojito_logo.PNG';
+import LoginNav from './LoginNav';
 
 const Sidebar = () => {
   return (<div className='w-1/6 h-screen sidebar'>
@@ -15,28 +16,28 @@ const Sidebar = () => {
     <div className='nav_wrapper'>
       <div className='main_nav'>
         <ul>
-          <li><NavLink activeStyle={{color: '#FFF'}} exact to='/'><LayoutOutlined />Dashboard</NavLink></li>
-          <li><NavLink activeStyle={{color: '#FFF'}} to='/budget'><DollarOutlined />Budget</NavLink></li>
-          <li><NavLink activeStyle={{color: '#FFF'}} to='/transaction_history'><HistoryOutlined />Transaction History</NavLink></li>
-          <li><NavLink activeStyle={{color: '#FFF'}} to='/expenses'><TagOutlined />Expenses</NavLink></li>
-          <li><NavLink activeStyle={{color: '#FFF'}} to='/investments'><LineChartOutlined />Investments</NavLink></li>
-          <li><NavLink activeStyle={{color: '#FFF'}} to='/spending_analyzer'><PieChartOutlined />Spending Analyzer</NavLink></li>
+          <li><NavLink activeStyle={{color: '#FFF'}} exact to='/'><LayoutOutlined /><span className='text_icon_padding'>Dashboard</span></NavLink></li>
+          <li><NavLink activeStyle={{color: '#FFF'}} to='/budget'><DollarOutlined /><span className='text_icon_padding'>Budget</span></NavLink></li>
+          <li><NavLink activeStyle={{color: '#FFF'}} to='/transaction_history'><HistoryOutlined /><span className='text_icon_padding'>Transaction History</span></NavLink></li>
+          <li><NavLink activeStyle={{color: '#FFF'}} to='/income'><TagOutlined /><span className='text_icon_padding'>Income</span></NavLink></li>
+          <li><NavLink activeStyle={{color: '#FFF'}} to='/expenses'><TagOutlined /><span className='text_icon_padding'>Expenses</span></NavLink></li>
+          <li><NavLink activeStyle={{color: '#FFF'}} to='/investments'><LineChartOutlined /><span className='text_icon_padding'>Investments</span></NavLink></li>
+          <li><NavLink activeStyle={{color: '#FFF'}} to='/spending_analyzer'><PieChartOutlined /><span className='text_icon_padding'>Spending Analyzer</span></NavLink></li>
         </ul>
       </div>
 
       <div className='account_info'>
-        <p className='selected'>Welcome, Trevor!</p>
-        <ul>
-          <li><NavLink activeStyle={{color: '#FFF'}} to='/my_account'><UserOutlined />My Account</NavLink></li>
-          <li><NavLink activeStyle={{color: '#FFF'}} to='/sign_out'><LogoutOutlined />Sign Out</NavLink></li>
-        </ul>
+        <WelcomeUser />
+        <LoginNav />
       </div>
 
       <div className='footer'>
-        <TwitterOutlined />
-        <InstagramOutlined />
-        <LinkedinOutlined />
-        <FacebookOutlined />
+        <div>
+          <a target='blank' href='http://www.twitter.com/'><TwitterOutlined className='footer_icon' style={{fontSize: '24px', padding: '4px', paddingLeft: '0'}} /></a>
+          <a target='blank' href='http://www.instagram.com/'><InstagramOutlined className='footer_icon' style={{fontSize: '24px', padding: '4px'}} /></a>
+          <a target='blank' href='http://www.linkedin.com/'><LinkedinOutlined className='footer_icon' style={{fontSize: '24px', padding: '4px'}} /></a>
+          <a target='blank' href='http://www.facebook.com/'><FacebookOutlined className='footer_icon' style={{fontSize: '24px', padding: '4px'}} /></a>
+        </div>
       </div>
     </div>
   </div>);

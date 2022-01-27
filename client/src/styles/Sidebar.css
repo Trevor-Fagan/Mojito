@@ -11,7 +11,15 @@
 }
 
 .sidebar ul li {
+    line-height: 28px;
+}
 
+.sidebar ul li:hover {
+    color: #FFF;
+}
+
+.text_icon_padding {
+    padding-left: 4px;
 }
 
 .logo {
@@ -42,4 +50,12 @@
 
 .account_info {
     margin-top: 30px;
+}
+
+.footer {
+    margin-top: 20px;
+}
+
+.footer_icon:hover {
+    color: #FFF;
 }
