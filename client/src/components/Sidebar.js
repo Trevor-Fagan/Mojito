@@ -3,7 +3,7 @@ import { Link, NavLink } from 'react-router-dom';
 import '../styles/Sidebar.css';
 import { LayoutOutlined, DollarOutlined, HistoryOutlined, TagOutlined, LineChartOutlined, PieChartOutlined,
   TwitterOutlined, InstagramOutlined, LinkedinOutlined, FacebookOutlined,
-  UserOutlined, LogoutOutlined } from '@ant-design/icons';
+  UserOutlined, LogoutOutlined, UserAddOutlined } from '@ant-design/icons';
 import Logo from '../images/mojito_logo.PNG';
 
 const Sidebar = () => {
@@ -30,6 +30,7 @@ const Sidebar = () => {
         <ul>
           <li><NavLink activeStyle={{color: '#FFF'}} to='/my_account'><UserOutlined /><span className='text_icon_padding'>My Account</span></NavLink></li>
           <li><NavLink activeStyle={{color: '#FFF'}} to='/sign_out'><LogoutOutlined /><span className='text_icon_padding'>Sign Out</span></NavLink></li>
+          <li><NavLink activeStyle={{color: '#FFF'}} to='/sign_up'><UserAddOutlined /><span className='text_icon_padding'>Sign Up</span></NavLink></li>
         </ul>
       </div>
 
