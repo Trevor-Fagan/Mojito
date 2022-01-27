@@ -17,7 +17,7 @@ const SignUp = () => {
             <input className='text_input' type='text' placeholder='email...'></input>
 
             <h3>Password</h3>
-            <input className='text_input' type='text' placeholder='password...'></input>
+            <input className='text_input' type='password' placeholder='password...'></input>
 
             <br />
             <input className='submit_input' type='submit' value='Submit' />
