@@ -10,6 +10,7 @@ import Account from '../src/pages/Account';
 import SignOut from '../src/pages/SignOut';
 import Income from '../src/pages/Income';
 import SignUp from '../src/pages/SignUp';
+import SignIn from '../src/pages/SignIn';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
             <Route path='/sign_out' component={SignOut}></Route>
             <Route path='/income' component={Income}></Route>
             <Route path='/sign_up' component={SignUp}></Route>
+            <Route path='/sign_in' component={SignIn}></Route>
           </Switch>
         </div>
     </Router>

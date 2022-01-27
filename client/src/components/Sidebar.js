@@ -1,10 +1,12 @@
 import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
+import WelcomeUser from './WelcomeUser';
 import '../styles/Sidebar.css';
 import { LayoutOutlined, DollarOutlined, HistoryOutlined, TagOutlined, LineChartOutlined, PieChartOutlined,
-  TwitterOutlined, InstagramOutlined, LinkedinOutlined, FacebookOutlined,
-  UserOutlined, LogoutOutlined, UserAddOutlined } from '@ant-design/icons';
+  TwitterOutlined, InstagramOutlined, LinkedinOutlined, FacebookOutlined } from '@ant-design/icons';
 import Logo from '../images/mojito_logo.PNG';
+import { useAuth0 } from '@auth0/auth0-react';
+import LoginNav from './LoginNav';
 
 const Sidebar = () => {
   return (<div className='w-1/6 h-screen sidebar'>
@@ -26,12 +28,8 @@ const Sidebar = () => {
       </div>
 
       <div className='account_info'>
-        <p className='selected'>Welcome, Trevor!</p>
-        <ul>
-          <li><NavLink activeStyle={{color: '#FFF'}} to='/my_account'><UserOutlined /><span className='text_icon_padding'>My Account</span></NavLink></li>
-          <li><NavLink activeStyle={{color: '#FFF'}} to='/sign_out'><LogoutOutlined /><span className='text_icon_padding'>Sign Out</span></NavLink></li>
-          <li><NavLink activeStyle={{color: '#FFF'}} to='/sign_up'><UserAddOutlined /><span className='text_icon_padding'>Sign Up</span></NavLink></li>
-        </ul>
+        <WelcomeUser />
+        <LoginNav />
       </div>
 
       <div className='footer'>
