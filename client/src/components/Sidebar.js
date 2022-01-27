@@ -5,7 +5,6 @@ import '../styles/Sidebar.css';
 import { LayoutOutlined, DollarOutlined, HistoryOutlined, TagOutlined, LineChartOutlined, PieChartOutlined,
   TwitterOutlined, InstagramOutlined, LinkedinOutlined, FacebookOutlined } from '@ant-design/icons';
 import Logo from '../images/mojito_logo.PNG';
-import { useAuth0 } from '@auth0/auth0-react';
 import LoginNav from './LoginNav';
 
 const Sidebar = () => {

@@ -4,7 +4,7 @@ import { useAuth0 } from '@auth0/auth0-react';
 const WelcomeUser = () => {
     const { user, isAuthenticated } = useAuth0();
 
-  return isAuthenticated && <p className='selected'>Welcome, {user.given_name}!</p> || 'Welcome user!';
+  return (isAuthenticated && <p className='selected'>Welcome, {user.given_name}!</p>) || (<p>Welcome user!</p>);
 };
 
 export default WelcomeUser;
