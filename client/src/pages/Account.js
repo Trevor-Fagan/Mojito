@@ -12,6 +12,7 @@ const Account = () => {
       <img src={user.picture} />
       <h3>Name: {user.given_name} {user.family_name}</h3>
       <h3>Email: {user.email}</h3>
+      <h1>Hey</h1>
     </div>
     )
 }
