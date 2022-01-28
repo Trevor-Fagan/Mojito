@@ -2,6 +2,7 @@ import React from 'react';
 import { PlusCircleOutlined } from '@ant-design/icons';
 import { Link } from 'react-router-dom';
 import '../styles/Dashboard.css'
+import MyChart from '../components/MyChart';
 
 const Dashboard = () => {
   return <div className='dashboard w-full'>
@@ -30,18 +31,21 @@ const Dashboard = () => {
         <Link to='/income'>
           <div className='widget_panel income h-2/6 top_widget_panel'>
               <h3>Income</h3>
+              <MyChart />
           </div>
         </Link>
 
         <Link to='/expenses'>
           <div className='widget_panel expenses h-2/6'>
               <h3>Expenses</h3>
+              <MyChart />
           </div>
         </Link>
 
         <Link to='/investments'>
           <div className='widget_panel investments h-2/6'>
               <h3>Investments</h3>
+              <MyChart />
           </div>
         </Link>
     </div>
