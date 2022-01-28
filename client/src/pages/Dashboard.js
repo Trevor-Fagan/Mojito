@@ -3,6 +3,7 @@ import { PlusCircleOutlined } from '@ant-design/icons';
 import { Link } from 'react-router-dom';
 import '../styles/Dashboard.css'
 import MyChart from '../components/MyChart';
+import Transaction from '../components/Transaction';
 
 const Dashboard = () => {
   return <div className='dashboard w-full'>
@@ -22,6 +23,10 @@ const Dashboard = () => {
         <Link to= '/transaction_history'>
           <div className='widget_panel transaction_history'>
             <h3>Transaction History</h3>
+            <Transaction />
+            <Transaction />
+            <Transaction />
+            <Transaction />
           </div>
         </Link>
       </div>
