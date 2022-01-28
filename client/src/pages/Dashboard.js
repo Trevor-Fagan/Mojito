@@ -8,7 +8,7 @@ const Dashboard = () => {
     <div className='overview_bar w-full'>
       <h2>Overview</h2>
 
-      <a href='#'><PlusCircleOutlined style={{ color: '#21883B'}}/></a>
+      <a href='/'><PlusCircleOutlined style={{ color: '#21883B'}}/></a>
     </div>
 
       <div className='col_one lg:w-4/6 md:w-full'>
