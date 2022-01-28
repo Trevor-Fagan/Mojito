@@ -9,7 +9,7 @@ const Account = () => {
     <div>
       <h2>My Account</h2>
 
-      <img src={user.picture} />
+      <img src={user.picture} alt='user' />
       <h3>Name: {user.given_name} {user.family_name}</h3>
       <h3>Email: {user.email}</h3>
     </div>

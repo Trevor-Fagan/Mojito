@@ -10,7 +10,7 @@ import LoginNav from './LoginNav';
 const Sidebar = () => {
   return (<div className='w-1/6 h-screen sidebar'>
     <div className='logo selected'>
-      <Link to='/'><img className='logo_img' src={Logo} /><h1 style={{display: 'inline-block', padding: '10px', fontSize: '24px'}}>Mojito</h1></Link>
+      <Link to='/'><img className='logo_img' alt='logo' src={Logo} /><h1 style={{display: 'inline-block', padding: '10px', fontSize: '24px'}}>Mojito</h1></Link>
     </div>
 
     <div className='nav_wrapper'>
