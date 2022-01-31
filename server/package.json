@@ -12,6 +12,9 @@
   "dependencies": {
     "express": "^4.17.2",
     "mongoose": "^6.1.7",
-    "nodemon": "^2.0.15"
+    "mysql2": "^2.3.3",
+    "nodemon": "^2.0.15",
+    "plaid": "^9.10.0",
+    "react-plaid-link": "^3.3.0"
   }
 }
