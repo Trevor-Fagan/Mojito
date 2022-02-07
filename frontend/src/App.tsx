@@ -1,11 +1,12 @@
 import React, { useEffect, useContext, useCallback } from "react";
 
-import Header from "./Components/Headers";
 import Products from "./Components/ProductTypes/Products";
 import Items from "./Components/ProductTypes/Items";
 import Context from "./Context";
-
+import Link from './Components/Link';
+import Sidebar from './MojitoComponents/Sidebar';
 import styles from "./App.module.scss";
+import { BrowserRouter as Router } from 'react-router-dom';
 
 const App = () => {
   const { linkSuccess, isItemAccess, dispatch } = useContext(Context);
@@ -80,17 +81,16 @@ const App = () => {
   }, [dispatch, generateToken, getInfo]);
 
   return (
-    <div className={styles.App}>
-      <div className={styles.container}>
-        <Header />
+    <Router>
+        <Sidebar />
+        <Link />
         {linkSuccess && isItemAccess && (
           <>
             <Products />
             <Items />
           </>
         )}
-      </div>
-    </div>
+    </Router>
   );
 };
 

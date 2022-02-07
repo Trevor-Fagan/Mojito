@@ -1,0 +1,61 @@
+.sidebar {
+    float: left;
+    border-right: 2px solid gray;
+    background: rgb(150,156,198);
+    background: linear-gradient(0deg, rgba(150,156,198,1) 0%, rgba(115,154,219,1) 100%);
+    color: #DBDBDB;
+}
+
+.sidebar ul {
+    
+}
+
+.sidebar ul li {
+    line-height: 28px;
+}
+
+.sidebar ul li:hover {
+    color: #FFF;
+}
+
+.text_icon_padding {
+    padding-left: 4px;
+}
+
+.logo {
+    text-align: center;
+    margin-top: 20px;
+    margin-left: -10%;
+}
+
+.logo_img {
+    width: 50px;
+    display: inline-block;
+    margin-top: -10px;
+}
+
+.selected {
+    color: #FFF;
+}
+
+.nav_wrapper {
+    width: 60%;
+    margin: 0 auto;
+    margin-left: 28%;
+}
+
+.main_nav {
+    margin-top: 30px;
+}
+
+.account_info {
+    margin-top: 30px;
+}
+
+.footer {
+    margin-top: 20px;
+}
+
+.footer_icon:hover {
+    color: #FFF;
+}
