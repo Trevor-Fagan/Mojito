@@ -3,10 +3,10 @@ import React, { useEffect, useContext, useCallback } from "react";
 import Products from "./Components/ProductTypes/Products";
 import Items from "./Components/ProductTypes/Items";
 import Context from "./Context";
-import Link from './Components/Link';
+import Dashboard from "./MojitoComponents/Dashboard";
 import Sidebar from './MojitoComponents/Sidebar';
 import styles from "./App.module.scss";
-import { BrowserRouter as Router } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 const App = () => {
   const { linkSuccess, isItemAccess, dispatch } = useContext(Context);
@@ -83,7 +83,9 @@ const App = () => {
   return (
     <Router>
         <Sidebar />
-        <Link />
+          <Switch>
+            <Route path='/' exact component={Dashboard}></Route>
+          </Switch>
         {linkSuccess && isItemAccess && (
           <>
             <Products />
