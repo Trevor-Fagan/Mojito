@@ -1,7 +1,24 @@
+import { render } from '@testing-library/react';
 import React from 'react';
 
-const TransactionHistory = () => {
-  return <div>Transaction history</div>;
+class TransactionHistory extends React.Component {
+
+  async componentDidMount() {
+    const response = await fetch('/api/transactions')
+    const data = await response.json();
+    this.setState({person: data.transactions[0], loading: false});
+    for (let i = 0; i < data.accounts.length; i++) {
+      console.log(data.transactions[i]);
+    }
+  }
+
+  render() {
+    return(
+      <div>
+        
+      </div>
+    );
+  }
 };
 
 export default TransactionHistory;
