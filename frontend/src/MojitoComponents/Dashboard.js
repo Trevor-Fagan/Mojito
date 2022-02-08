@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link as PageLink } from 'react-router-dom';
 import Link from '../Components/Link';
+import Transaction from './Transaction';
 import '../styles/Dashboard.css'
 
 const Dashboard = () => {
@@ -13,17 +14,21 @@ const Dashboard = () => {
     <div className='row'>
       <div className='col-8'>
         <div className='row'>
-            <PageLink to='/budget'>
-            <div className='widget_panel your_budget top_widget_panel'>
-              <h3>Your Budget</h3>
-              <Link />
-            </div>
+            <PageLink className='widget_header' to='/budget'>
+              <div className='widget_panel your_budget top_widget_panel'>
+                <h3>Your Budget</h3>
+                <Link />
+              </div>
             </PageLink>
         </div>
         <div className='row'>
-          <PageLink to= '/transaction_history'>
+          <PageLink className='widget_header' to= '/transaction_history'>
             <div className='widget_panel transaction_history'>
               <h3>Transaction History</h3>
+              <Transaction />
+              <Transaction />
+              <Transaction />
+              <Transaction />
             </div>
           </PageLink>
         </div>
@@ -31,22 +36,22 @@ const Dashboard = () => {
 
       <div className='col-4'>
         <div className='row'>
-          <PageLink to='/income'>
-              <div className='widget_panel income h-2/6 top_widget_panel'>
+          <PageLink className='widget_header' to='/income'>
+              <div className='widget_panel top_widget_panel'>
                   <h3>Income</h3>
               </div>
           </PageLink>
         </div>
         <div className='row'>
-          <PageLink to='/expenses'>
-            <div className='widget_panel expenses h-2/6'>
+          <PageLink className='widget_header' to='/expenses'>
+            <div className='widget_panel'>
                 <h3>Expenses</h3>
             </div>
           </PageLink>
         </div>
         <div className='row'>
-          <PageLink to='/investments'>
-            <div className='widget_panel investments h-2/6'>
+          <PageLink className='widget_header' to='/investments'>
+            <div className='widget_panel investments'>
                 <h3>Investments</h3>
             </div>
           </PageLink>

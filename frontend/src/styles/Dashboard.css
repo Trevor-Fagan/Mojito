@@ -16,14 +16,6 @@
     margin-top: 0px;
 }
 
-.col_one {
-    float: left;
-}
-
-.col_two {
-    float: right;
-}
-
 .widget_panel {
     min-height: 260px;
     border-radius: 10px;
@@ -33,14 +25,23 @@
     margin: 1em;
 }
 
+.widget_header {
+    text-decoration: none;
+}
+
+.widget_header h3 {
+    color: gray;
+    font-size: 20px;
+}
+
 .top_widget_panel {
     margin-top: 0;
 }
 
 .your_budget {
-    min-height: 400px;
+    min-height: 406px;
 }
 
 .transaction_history {
-    min-height: 400px;
+    min-height: 406px;
 }

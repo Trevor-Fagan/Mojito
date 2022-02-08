@@ -68,7 +68,7 @@ const Link = () => {
   }, [ready, open, isOauth]);
 
   return (
-    <Button type="button" large onClick={() => open()} disabled={!ready}>
+    <Button type="button" small onClick={() => open()} disabled={!ready}>
       Launch Link
     </Button>
   );
