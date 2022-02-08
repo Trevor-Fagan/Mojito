@@ -2,6 +2,8 @@ import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import '../styles/Sidebar.css';
 import Logo from '../images/mojito_logo.PNG';
+import WelcomeUser from './WelcomeUser';
+import LoginNav from './LoginNav';
 
 const Sidebar = () => {
   return (<div className='sidebar'>
@@ -23,7 +25,8 @@ const Sidebar = () => {
       </div>
 
       <div className='account_info'>
-        
+        <WelcomeUser />
+        <LoginNav />
       </div>
 
       <div className='footer'>
