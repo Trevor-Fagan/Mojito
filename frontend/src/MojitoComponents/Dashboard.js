@@ -4,7 +4,7 @@ import Link from '../Components/Link';
 import '../styles/Dashboard.css'
 
 const Dashboard = () => {
-  return <div className='dashboard w-full'>
+  return <div className='dashboard'>
     <div className='overview_bar w-full'>
       <h2>Overview</h2>
       <a href='/'></a>

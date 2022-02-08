@@ -4,7 +4,7 @@ import '../styles/Sidebar.css';
 import Logo from '../images/mojito_logo.PNG';
 
 const Sidebar = () => {
-  return (<div className='lg:w-1/6 lg:h-screen md:w-full md:h-max sm:w-full sidebar'>
+  return (<div className='sidebar'>
     <div className='logo selected'>
       <Link to='/'><img className='logo_img' alt='logo' src={Logo} /><h1 style={{display: 'inline-block', padding: '10px', fontSize: '24px'}}>Mojito</h1></Link>
     </div>
