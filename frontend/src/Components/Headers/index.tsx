@@ -5,8 +5,7 @@ import InlineLink from "plaid-threads/InlineLink";
 
 import Link from "../Link";
 import Context from "../../Context";
-
-import styles from "./index.module.scss";
+import styles from './index.module.scss';
 
 const Header = () => {
   const {

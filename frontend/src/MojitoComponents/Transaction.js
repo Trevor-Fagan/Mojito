@@ -10,15 +10,15 @@ const Transaction = () => {
 
       <div className='transaction_text_container'>
           <div className='transaction_name'>
-              <h3>AMZ Purchase *420AGSJ4</h3>
+              <p>AMZ Purchase *420AGSJ4</p>
           </div>
           <div className='transaction_date'>
-              <h3>January 28th</h3>
+              <p>January 28th</p>
           </div>
       </div>
 
       <div className='transaction_amount'>
-        <h3>$5.73</h3>
+        <p>$5.73</p>
       </div>
   </div>;
 };

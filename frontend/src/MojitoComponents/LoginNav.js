@@ -9,7 +9,7 @@ const LoginNav = () => {
   const { isAuthenticated } = useAuth0();
 
   return (isAuthenticated && <div>
-      <ul>
+      <ul style={{marginLeft: '-32px'}}>
           <li><NavLink activeStyle={{color: '#FFF'}} to='/my_account'><UserOutlined /><span className='text_icon_padding'>My Account</span></NavLink></li>
           <li><LogoutOutlined /> <LogoutButton /></li>
         </ul>

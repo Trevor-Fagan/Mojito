@@ -14,10 +14,13 @@ const Dashboard = () => {
     <div className='row'>
       <div className='col-8'>
         <div className='row'>
-            <Link />
             <PageLink className='widget_header' to='/budget'>
               <div className='widget_panel your_budget top_widget_panel'>
                 <h3>Your Budget</h3>
+
+                <div style={{width: "80px", height: '30px'}}>
+                  <Link />
+                </div>
               </div>
             </PageLink>
         </div>
