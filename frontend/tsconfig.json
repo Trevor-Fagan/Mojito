@@ -9,6 +9,10 @@
     "strict": true,
     "forceConsistentCasingInFileNames": true,
     "noFallthroughCasesInSwitch": true,
+<<<<<<< HEAD
+=======
+    "noImplicitAny": false,
+>>>>>>> 79698f64a888456925b1952c16137531c4d24c77
     "module": "esnext",
     "moduleResolution": "node",
     "resolveJsonModule": true,

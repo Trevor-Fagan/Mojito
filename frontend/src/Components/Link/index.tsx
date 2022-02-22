@@ -68,8 +68,13 @@ const Link = () => {
   }, [ready, open, isOauth]);
 
   return (
+<<<<<<< HEAD
     <Button type="button" small onClick={() => open()} disabled={!ready}>
       Connect to Bank
+=======
+    <Button type="button" large onClick={() => open()} disabled={!ready}>
+      Connect Your Bank Account
+>>>>>>> 79698f64a888456925b1952c16137531c4d24c77
     </Button>
   );
 };

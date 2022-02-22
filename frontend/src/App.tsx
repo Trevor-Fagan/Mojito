@@ -3,6 +3,7 @@ import React, { useEffect, useContext, useCallback } from "react";
 import Products from "./Components/ProductTypes/Products";
 import Items from "./Components/ProductTypes/Items";
 import Context from "./Context";
+<<<<<<< HEAD
 import Dashboard from "./MojitoComponents/Dashboard";
 import Sidebar from './MojitoComponents/Sidebar';
 import Budget from "./MojitoComponents/pages/Budget";
@@ -16,6 +17,12 @@ import SpendingAnalyzer from "./MojitoComponents/pages/SpendingAnalyzer";
 import TransactionHistory from "./MojitoComponents/pages/TransactionHistory";
 import './App.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+=======
+import Link from './Components/Link/index';
+import Sidebar from "./MojitoComponents/Sidebar";
+
+import { BrowserRouter as Router } from 'react-router-dom';
+>>>>>>> 79698f64a888456925b1952c16137531c4d24c77
 
 const App = () => {
   const { linkSuccess, isItemAccess, dispatch } = useContext(Context);
@@ -92,6 +99,7 @@ const App = () => {
   return (
     <Router>
         <Sidebar />
+<<<<<<< HEAD
           <Switch>
             <Route path='/' exact component={Dashboard} />
             <Route path='/budget' component={Budget} />
@@ -113,5 +121,17 @@ const App = () => {
     </Router>
   );
 }
+=======
+        <Link />
+        {linkSuccess && isItemAccess && (
+          <>
+            <Products />
+            <Items />
+          </>
+        )}
+    </Router>
+  );
+};
+>>>>>>> 79698f64a888456925b1952c16137531c4d24c77
 
 export default App;

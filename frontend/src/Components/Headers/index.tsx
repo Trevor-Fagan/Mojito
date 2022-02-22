@@ -5,7 +5,12 @@ import InlineLink from "plaid-threads/InlineLink";
 
 import Link from "../Link";
 import Context from "../../Context";
+<<<<<<< HEAD
 import styles from './index.module.scss';
+=======
+
+import styles from "./index.module.scss";
+>>>>>>> 79698f64a888456925b1952c16137531c4d24c77
 
 const Header = () => {
   const {
@@ -20,6 +25,7 @@ const Header = () => {
 
   return (
     <div className={styles.grid}>
+<<<<<<< HEAD
       <h3 className={styles.title}>Plaid Quickstart</h3>
 
       {!linkSuccess ? (
@@ -34,6 +40,11 @@ const Header = () => {
             interact with in order to link their accounts to Plaid and allow you
             to access their accounts via the Plaid API.
           </p>
+=======
+
+      {!linkSuccess ? (
+        <>
+>>>>>>> 79698f64a888456925b1952c16137531c4d24c77
           {/* message if backend is not running and there is no link token */}
           {!backend ? (
             <Callout warning>
