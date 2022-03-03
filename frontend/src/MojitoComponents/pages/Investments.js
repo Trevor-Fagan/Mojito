@@ -1,20 +1,32 @@
 import React from 'react';
-import { LineChart, Line } from 'recharts';
+import { BarChart, LineChart, Line, CartesianGrid, XAxis, YAxis, ResponsiveContainer, Tooltip, Bar, Legend } from 'recharts';
 
 const data = [{name: 'Page A', uv: 400, pv: 2400, amt: 2400}];
-
-const renderLineChart = (
-  <LineChart width={400} height={400} data={data}>
-    <Line type="monotone" dataKey="uv" stroke="#8884d8" />
-  </LineChart>
-);
 
 const Investments = () => {
   return(
   <div>
-    <h2>Investments</h2>
+    <h2>Investments !</h2>
 
-    <p>This is the investments page</p>
+    <ResponsiveContainer width="50%" aspect={2}>
+      <BarChart
+        width={500}
+        height={300}
+        data={data}
+        margin={{
+          top: 5,
+          right: 30,
+          left: 20,
+          bottom: 5,
+        }}
+        >
+          <XAxis dataKey="name" />
+          <YAxis />
+          <Tooltip />
+          <Legend />
+          <Bar datakey="pv" fill="#222" />
+      </BarChart>
+    </ResponsiveContainer>
   </div>
   );
 };
