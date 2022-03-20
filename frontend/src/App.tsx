@@ -14,6 +14,7 @@ import SignOut from "./MojitoComponents/pages/SignOut";
 import SignIn from "./MojitoComponents/pages/SignIn";
 import SpendingAnalyzer from "./MojitoComponents/pages/SpendingAnalyzer";
 import TransactionHistory from "./MojitoComponents/pages/TransactionHistory";
+import MyAccount from "./MojitoComponents/pages/MyAccount";
 import './App.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
@@ -96,19 +97,14 @@ const App = () => {
             <Route path='/' exact component={Dashboard} />
             <Route path='/budget' component={Budget} />
             <Route path='/transaction_history' component={TransactionHistory} />
+            <Route path='/my_account' component={MyAccount} />
             <Route path='/expenses' component={Expenses} />
             <Route path='/investments' component={Investments} />
             <Route path='/spending_analyzer' component={SpendingAnalyzer} />
-            <Route path='/sign_out' component={SignOut}></Route>
-            <Route path='/income' component={Income}></Route>
-            <Route path='/sign_up' component={SignUp}></Route>
-            <Route path='/sign_in' component={SignIn}></Route>
-            {/* {linkSuccess && isItemAccess && (
-              <>
-                <Products />
-                <Items />
-              </>
-            )} */}
+            <Route path='/sign_out' component={SignOut} />
+            <Route path='/income' component={Income} />
+            <Route path='/sign_up' component={SignUp} />
+            <Route path='/sign_in' component={SignIn} />
           </Switch>
     </Router>
   );

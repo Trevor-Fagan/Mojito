@@ -10,11 +10,11 @@ const LoginNav = () => {
 
   return (isAuthenticated && <div>
       <ul style={{marginLeft: '-32px'}}>
-          <li><NavLink activeStyle={{color: '#FFF'}} to='/my_account'><UserOutlined /><span className='text_icon_padding'>My Account</span></NavLink></li>
+          <li><NavLink style={{textDecoration: 'none'}} activeStyle={{color: '#FFF'}} to='/my_account'><UserOutlined /><span className='text_icon_padding'>My Account</span></NavLink></li>
           <li><LogoutOutlined /> <LogoutButton /></li>
         </ul>
   </div>) || 
-        (<ul>
+        (<ul style={{marginLeft: '-32px'}}>
             <li><UserOutlined /> <LoginButton /></li>
         </ul>)
   ;
