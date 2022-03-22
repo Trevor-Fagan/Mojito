@@ -12,6 +12,7 @@ import SignUp from "./MojitoComponents/pages/SignUp";
 import SignOut from "./MojitoComponents/pages/SignOut";
 import SignIn from "./MojitoComponents/pages/SignIn";
 import TransactionHistory from "./MojitoComponents/pages/TransactionHistory";
+import MyAccount from "./MojitoComponents/pages/MyAccount";
 import './App.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
@@ -94,7 +95,9 @@ const App = () => {
             <Route path='/' exact component={Dashboard} />
             <Route path='/budget' component={Budget} />
             <Route path='/transaction_history' component={TransactionHistory} />
+            <Route path='/my_account' component={MyAccount} />
             <Route path='/expenses' component={Expenses} />
+
             <Route path='/sign_out' component={SignOut}></Route>
             <Route path='/income' component={Income}></Route>
             <Route path='/sign_up' component={SignUp}></Route>
@@ -105,6 +108,9 @@ const App = () => {
                 <Items />
               </>
             )} */}
+
+
+
           </Switch>
     </Router>
   );
