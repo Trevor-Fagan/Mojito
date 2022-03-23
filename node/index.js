@@ -425,10 +425,11 @@ app.get('/api/payment', function (request, response, next) {
     .catch(next);
 });
 
-app.use('/api', function (error, request, response, next) {
-  prettyPrintResponse(error.response);
-  response.json(formatError(error.response));
-});
+// app.use('/api', function (error, request, response, next) {
+//   console.log('test')
+//   prettyPrintResponse(error.response);
+//   response.json(formatError(error.response));
+// });
 
 const server = app.listen(APP_PORT, function () {
   console.log('plaid-quickstart server listening on port ' + APP_PORT);
