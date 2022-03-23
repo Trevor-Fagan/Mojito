@@ -16,6 +16,7 @@ html, body {
 .main_content {
   float: left;
   height: 100%;
-  width: 83.33333%; 
-  margin-left: 16.666666%;
+  width: 85%; 
+  margin-left: 15%;
+  padding: 20px 50px;
 }

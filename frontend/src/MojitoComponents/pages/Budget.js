@@ -1,5 +1,5 @@
 import React from 'react';
-import { PieChart, Pie, Tooltip, ResponsiveContainer } from 'recharts';
+import { PieChart, Pie, Tooltip } from 'recharts';
 
 const Budget = () => {
 
@@ -10,7 +10,7 @@ const Budget = () => {
   ]
 
   return <div className="main_content">
-    Testing Charts
+    Budget
 
       <PieChart width={400} height={400}>
           <Pie
@@ -25,12 +25,6 @@ const Budget = () => {
           />
           <Tooltip />
       </PieChart>
-
-      <div style={{width: '200px', height: '200px', backgroundColor: "red"}}></div>
-      <div style={{width: '200px', height: '200px', backgroundColor: "red"}}></div>
-      <div style={{width: '200px', height: '200px', backgroundColor: "red"}}></div>
-      <div style={{width: '200px', height: '200px', backgroundColor: "red"}}></div>
-      <div style={{width: '200px', height: '200px', backgroundColor: "red"}}></div>
 
   </div>;
 };
