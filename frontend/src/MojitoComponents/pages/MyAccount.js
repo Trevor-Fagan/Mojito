@@ -5,7 +5,7 @@ const MyAccount = () => {
   const { user, isAuthenticated } = useAuth0();
   
   return(
-    <div>
+    <div className="main_content">
       <h2>My Account</h2>
 
       <div>

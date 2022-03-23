@@ -93,19 +93,19 @@ const App = () => {
   return (
     <Router>
         <Sidebar />
-          <Switch>
-            <Route path='/' exact component={Dashboard} />
-            <Route path='/budget' component={Budget} />
-            <Route path='/transaction_history' component={TransactionHistory} />
-            <Route path='/my_account' component={MyAccount} />
-            <Route path='/expenses' component={Expenses} />
-            <Route path='/investments' component={Investments} />
-            <Route path='/spending_analyzer' component={SpendingAnalyzer} />
-            <Route path='/sign_out' component={SignOut} />
-            <Route path='/income' component={Income} />
-            <Route path='/sign_up' component={SignUp} />
-            <Route path='/sign_in' component={SignIn} />
-          </Switch>
+            <Switch>
+              <Route path='/' exact component={Dashboard} />
+              <Route path='/budget' component={Budget} />
+              <Route path='/transaction_history' component={TransactionHistory} />
+              <Route path='/my_account' component={MyAccount} />
+              <Route path='/expenses' component={Expenses} />
+              <Route path='/investments' component={Investments} />
+              <Route path='/spending_analyzer' component={SpendingAnalyzer} />
+              <Route path='/sign_out' component={SignOut} />
+              <Route path='/income' component={Income} />
+              <Route path='/sign_up' component={SignUp} />
+              <Route path='/sign_in' component={SignIn} />
+            </Switch>
     </Router>
   );
 }

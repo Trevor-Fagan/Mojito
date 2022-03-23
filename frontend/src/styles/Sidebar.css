@@ -6,6 +6,7 @@
     color: #DBDBDB;
     min-height: 100vh;
     width: 16.66666%;
+    position: fixed;
 }
 
 .sidebar a:hover {

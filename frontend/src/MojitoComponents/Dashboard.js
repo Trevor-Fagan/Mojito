@@ -3,9 +3,16 @@ import { Link as PageLink } from 'react-router-dom';
 import Link from '../Components/Link';
 import Transaction from './Transaction';
 import '../styles/Dashboard.css'
+import { PieChart, Pie, Tooltip, ResponsiveContainer } from 'recharts';
 
 const Dashboard = () => {
-  return <div className='dashboard .container-fluid py-3'>
+  const data = [
+    {name: "Facebook", value: 200000},
+    {name: "Instagram", value: 30000},
+    {name: "Yup", value: 250000}
+  ]
+
+  return <div className='dashboard .container-fluid py-3 main_content'>
     <div className='overview_bar'>
       <h2>Overview</h2>
       <a href='/'></a>
@@ -41,7 +48,20 @@ const Dashboard = () => {
         <div className='row'>
           <PageLink className='widget_header' to='/income'>
               <div className='widget_panel top_widget_panel'>
-                  <h3>Income</h3>
+                  <h3>Income</h3>'
+                    <PieChart width={300} height={300}>
+                        <Pie
+                          dataKey="value"
+                          isAnimationActive={false}
+                          data={data}
+                          cx={210}
+                          cy={140}
+                          outerRadius={80}
+                          fill="#8884d8"
+                          label
+                        />
+                        <Tooltip />
+                    </PieChart>
               </div>
           </PageLink>
         </div>
