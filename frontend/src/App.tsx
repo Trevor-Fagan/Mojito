@@ -8,11 +8,9 @@ import Sidebar from './MojitoComponents/Sidebar';
 import Budget from "./MojitoComponents/pages/Budget";
 import Expenses from "./MojitoComponents/pages/Expenses";
 import Income from "./MojitoComponents/pages/Income";
-import Investments from "./MojitoComponents/pages/Investments";
 import SignUp from "./MojitoComponents/pages/SignUp";
 import SignOut from "./MojitoComponents/pages/SignOut";
 import SignIn from "./MojitoComponents/pages/SignIn";
-import SpendingAnalyzer from "./MojitoComponents/pages/SpendingAnalyzer";
 import TransactionHistory from "./MojitoComponents/pages/TransactionHistory";
 import MyAccount from "./MojitoComponents/pages/MyAccount";
 import './App.css';
@@ -93,19 +91,27 @@ const App = () => {
   return (
     <Router>
         <Sidebar />
-            <Switch>
-              <Route path='/' exact component={Dashboard} />
-              <Route path='/budget' component={Budget} />
-              <Route path='/transaction_history' component={TransactionHistory} />
-              <Route path='/my_account' component={MyAccount} />
-              <Route path='/expenses' component={Expenses} />
-              <Route path='/investments' component={Investments} />
-              <Route path='/spending_analyzer' component={SpendingAnalyzer} />
-              <Route path='/sign_out' component={SignOut} />
-              <Route path='/income' component={Income} />
-              <Route path='/sign_up' component={SignUp} />
-              <Route path='/sign_in' component={SignIn} />
-            </Switch>
+          <Switch>
+            <Route path='/' exact component={Dashboard} />
+            <Route path='/budget' component={Budget} />
+            <Route path='/transaction_history' component={TransactionHistory} />
+            <Route path='/my_account' component={MyAccount} />
+            <Route path='/expenses' component={Expenses} />
+
+            <Route path='/sign_out' component={SignOut}></Route>
+            <Route path='/income' component={Income}></Route>
+            <Route path='/sign_up' component={SignUp}></Route>
+            <Route path='/sign_in' component={SignIn}></Route>
+            {/* {linkSuccess && isItemAccess && (
+              <>
+                <Products />
+                <Items />
+              </>
+            )} */}
+
+
+
+          </Switch>
     </Router>
   );
 }

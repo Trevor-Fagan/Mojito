@@ -21,8 +21,6 @@ const Sidebar = () => {
           <li><NavLink activeStyle={{color: '#FFF'}} className='nav_link' to='/transaction_history'><HistoryOutlined /><span className='text_icon_padding'>Transaction History</span></NavLink></li>
           <li><NavLink activeStyle={{color: '#FFF'}} className='nav_link' to='/income'><TagOutlined /><span className='text_icon_padding'>Income</span></NavLink></li>
           <li><NavLink activeStyle={{color: '#FFF'}} className='nav_link' to='/expenses'><TagOutlined /><span className='text_icon_padding'>Expenses</span></NavLink></li>
-          <li><NavLink activeStyle={{color: '#FFF'}} className='nav_link' to='/investments'><LineChartOutlined /><span className='text_icon_padding'>Investments</span></NavLink></li>
-          <li><NavLink activeStyle={{color: '#FFF'}} className='nav_link' to='/spending_analyzer'><PieChartOutlined /><span className='text_icon_padding'>Spending Analyzer</span></NavLink></li>
         </ul>
       </div>
 
