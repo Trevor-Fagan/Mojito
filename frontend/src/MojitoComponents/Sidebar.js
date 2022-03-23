@@ -4,7 +4,7 @@ import '../styles/Sidebar.css';
 import Logo from '../images/mojito_logo.PNG';
 import WelcomeUser from './WelcomeUser';
 import LoginNav from './LoginNav';
-import { LayoutOutlined, DollarOutlined, HistoryOutlined, TagOutlined, LineChartOutlined, PieChartOutlined,
+import { LayoutOutlined, DollarOutlined, HistoryOutlined, TagOutlined,
   TwitterOutlined, InstagramOutlined, LinkedinOutlined, FacebookOutlined } from '@ant-design/icons';
 
 const Sidebar = () => {
@@ -18,7 +18,7 @@ const Sidebar = () => {
         <ul>
           <li><NavLink activeStyle={{color: '#FFF'}} className='nav_link' exact to='/'><LayoutOutlined /><span className='text_icon_padding'>Dashboard</span></NavLink></li>
           <li><NavLink activeStyle={{color: '#FFF'}} className='nav_link' to='/budget'><DollarOutlined /><span className='text_icon_padding'>Budget</span></NavLink></li>
-          <li><NavLink activeStyle={{color: '#FFF'}} className='nav_link' to='/transaction_history'><HistoryOutlined /><span className='text_icon_padding'>Transaction History</span></NavLink></li>
+          <li><NavLink activeStyle={{color: '#FFF'}} className='nav_link' to='/transaction_history'><HistoryOutlined /><span className='text_icon_padding'>Transactions</span></NavLink></li>
           <li><NavLink activeStyle={{color: '#FFF'}} className='nav_link' to='/income'><TagOutlined /><span className='text_icon_padding'>Income</span></NavLink></li>
           <li><NavLink activeStyle={{color: '#FFF'}} className='nav_link' to='/expenses'><TagOutlined /><span className='text_icon_padding'>Expenses</span></NavLink></li>
         </ul>

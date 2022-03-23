@@ -1,7 +1,5 @@
 import React, { useEffect, useContext, useCallback } from "react";
 
-import Products from "./Components/ProductTypes/Products";
-import Items from "./Components/ProductTypes/Items";
 import Context from "./Context";
 import Dashboard from "./MojitoComponents/Dashboard";
 import Sidebar from './MojitoComponents/Sidebar';
@@ -17,7 +15,8 @@ import './App.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 const App = () => {
-  const { linkSuccess, isItemAccess, dispatch } = useContext(Context);
+  const { dispatch } = useContext(Context);
+  // linkSuccess, isItemAccess,
 
   const getInfo = useCallback(async () => {
     const response = await fetch("/api/info", { method: "POST" });

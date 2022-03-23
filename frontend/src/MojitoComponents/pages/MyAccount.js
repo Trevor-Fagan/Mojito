@@ -2,14 +2,15 @@ import React from 'react';
 import { useAuth0 } from '@auth0/auth0-react';
 
 const MyAccount = () => {
-  const { user, isAuthenticated } = useAuth0();
-  
+  const { user } = useAuth0();
+  // isAuthenticated  , such as const { user, userAuthenticated }
+
   return(
     <div className="main_content">
       <h2>My Account</h2>
 
       <div>
-        <img style={{border: '2px solid gray', margin: '10px', borderRadius: '100%'}} src={user.picture} />
+        <img style={{border: '2px solid gray', margin: '10px', borderRadius: '100%'}} alt="logo" src={user.picture} />
         <h3>Name: {user.given_name} {user.family_name}</h3>
         <h3>Email: {user.email}</h3>
       </div>

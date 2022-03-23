@@ -3,7 +3,7 @@ import { Link as PageLink } from 'react-router-dom';
 import Link from '../Components/Link';
 import Transaction from './Transaction';
 import '../styles/Dashboard.css'
-import { PieChart, Pie, Tooltip, ResponsiveContainer } from 'recharts';
+import { PieChart, Pie, Tooltip } from 'recharts';
 
 const Dashboard = () => {
   const data = [
@@ -15,7 +15,6 @@ const Dashboard = () => {
   return <div className='dashboard .container-fluid py-3 main_content'>
     <div className='overview_bar'>
       <h2>Overview</h2>
-      <a href='/'></a>
     </div>
 
     <div className='row'>
