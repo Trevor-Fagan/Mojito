@@ -1,25 +1,18 @@
-# Mojito
+Mojito (Header 1)
 
-** DO THE FOLLOWING TO WORK ON THE CODE**
-* Make sure you are in the dev branch before 
-Working on any code or making any commits. 
-To verify:
-Git branch  		-> Should be dev
-If you aren’t in the right branch, do
-Git checkout dev		-> Start working!
-Nd doin
+Setup (Header 2)
+
 Git clone https://github.com/Trevor-Fagan/Mojito.git
-Cd Mojito
-Cd frontend
-Npm install react-scripts@4.0.1 –force  (<- two dashes there)
-Cd ..
-Cd backend
-Npm install dotenv
 
-Now to get it running:
-Cd frontend
-Npm start
+run npm install in the frontend and node directories 
 
-*In a new terminal*
-Cd backend
+How to run Frontend (Header 2)
+
+cd frontend
+npm start
+
+How to run backend (Header 2)
+
+In a new terminal
+cd backend
 ./start.sh
