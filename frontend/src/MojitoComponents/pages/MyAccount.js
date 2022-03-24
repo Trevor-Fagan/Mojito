@@ -3,14 +3,22 @@ import { useAuth0 } from "@auth0/auth0-react";
 import { Card } from "react-bootstrap";
 
 const MyAccount = () => {
-  const { user } = useAuth0();
-  // isAuthenticated  , such as const { user, userAuthenticated }
+  const { user, isAuthenticated } = useAuth0();
 
   return (
     <div className="main_content">
       <Card style={{ width: "36rem"}}>
         <Card.Body>
           <Card.Title>Account Information</Card.Title>
+          <img
+          style={{
+            border: "2px solid gray",
+            margin: "10px",
+            borderRadius: "100%",
+          }}
+          alt="logo"
+          src={user.picture}
+        />
           <Card.Text>
             First Name: {user.given_name}
             <br></br>
@@ -22,15 +30,6 @@ const MyAccount = () => {
       </Card>
 
       <div>
-        <img
-          style={{
-            border: "2px solid gray",
-            margin: "10px",
-            borderRadius: "100%",
-          }}
-          alt="logo"
-          src={user.picture}
-        />
       </div>
     </div>
   );

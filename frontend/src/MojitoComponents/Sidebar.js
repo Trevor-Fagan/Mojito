@@ -18,11 +18,11 @@ const Sidebar = () => {
     <div className='nav_wrapper'>
       <div className='main_nav'>
         <ul>
-          <li><NavLink activeStyle={{color: '#91E8D3'}} className='nav_link' exact to='/'><LayoutOutlined /><span className='text_icon_padding'>Dashboard</span></NavLink></li>
-          <li><NavLink activeStyle={{color: '#91E8D3'}} className='nav_link' to='/budget'><DollarOutlined /><span className='text_icon_padding'>Budget</span></NavLink></li>
-          <li><NavLink activeStyle={{color: '#91E8D3'}} className='nav_link' to='/transaction_history'><HistoryOutlined /><span className='text_icon_padding'>Transactions</span></NavLink></li>
-          <li><NavLink activeStyle={{color: '#91E8D3'}} className='nav_link' to='/income'><TagOutlined /><span className='text_icon_padding'>Income</span></NavLink></li>
-          <li><NavLink activeStyle={{color: '#91E8D3'}} className='nav_link' to='/expenses'><TagOutlined /><span className='text_icon_padding'>Expenses</span></NavLink></li>
+          <li><NavLink activeStyle={{color: '#FFF'}} className='nav_link' exact to='/'><LayoutOutlined /><span className='text_icon_padding'>Dashboard</span></NavLink></li>
+          <li><NavLink activeStyle={{color: '#FFF'}} className='nav_link' to='/budget'><DollarOutlined /><span className='text_icon_padding'>Budget</span></NavLink></li>
+          <li><NavLink activeStyle={{color: '#FFF'}} className='nav_link' to='/transaction_history'><HistoryOutlined /><span className='text_icon_padding'>Transactions</span></NavLink></li>
+          <li><NavLink activeStyle={{color: '#FFF'}} className='nav_link' to='/income'><TagOutlined /><span className='text_icon_padding'>Income</span></NavLink></li>
+          <li><NavLink activeStyle={{color: '#FFF'}} className='nav_link' to='/expenses'><TagOutlined /><span className='text_icon_padding'>Expenses</span></NavLink></li>
         </ul>
       </div>
 

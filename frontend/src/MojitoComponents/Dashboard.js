@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link as PageLink } from 'react-router-dom';
-import Link from '../Components/Link';
 import Transaction from './Transaction';
 import '../styles/Dashboard.css'
 import { PieChart, Pie, Tooltip } from 'recharts';
+import BudgetItem from '../MojitoComponents/BudgetItem';
 
 const Dashboard = () => {
   const data = [
@@ -12,9 +12,9 @@ const Dashboard = () => {
     {name: "Yup", value: 250000}
   ]
 
-  return <div className='dashboard .container-fluid py-3 main_content'>
+  return <div className='dashboard main_content'>
     <div className='overview_bar'>
-      <h2>Overview</h2>
+      <h2>Welcome</h2>
     </div>
 
     <div className="col-8" style={{float: "left"}}>
@@ -22,6 +22,20 @@ const Dashboard = () => {
         <PageLink className='widget_header' to='/budget'>
               <div className='widget_panel your_budget top_widget_panel'>
                 <h3>Your Budget</h3>
+
+                <div className="budget_left">
+                  <h4 className="amount_remaining">2000</h4>  
+                </div>
+
+                <div className="budget_right">
+                  <BudgetItem />
+                  <BudgetItem />
+                  <BudgetItem />
+                  <BudgetItem />
+                  <BudgetItem />
+                  <BudgetItem />
+                </div>
+        
               </div>
         </PageLink>
       </div>
@@ -75,7 +89,6 @@ const Dashboard = () => {
         <PageLink className='widget_header' to= '/transaction_history'>
               <div className='widget_panel transaction_history'>
                 <h3>Transaction History</h3>
-                <Transaction />
                 <Transaction />
                 <Transaction />
                 <Transaction />

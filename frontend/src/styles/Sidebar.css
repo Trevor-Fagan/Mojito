@@ -1,11 +1,10 @@
 .sidebar {
     float: left;
-    border-right: 2px solid gray;
-    background: rgb(150,156,198);
-    background: linear-gradient(0deg, rgba(150,156,198,1) 0%, rgba(115,154,219,1) 100%);
+    background: #0439D9;
+    border-right: 100px solid #0439D9;
     color: #DBDBDB;
     min-height: 100vh;
-    width: 15%;
+    width: 20%;
     position: fixed;
     font-weight: 500;
 }
@@ -16,11 +15,11 @@
 
 .nav_link {
     text-decoration: none;
-    color: #FFF;
+    color: #ACC6EB;
 }
 
 .nav_link:hover {
-    color: #91E8D3;
+    color: #FFF;
 }
 
 .sidebar ul li {

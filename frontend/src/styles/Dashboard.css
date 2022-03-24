@@ -1,12 +1,14 @@
 .dashboard {
     font-family: avenir, helvetica, sans-serif;
+    background-color: #EEE;
+    z-index: 11;
 }
 
 .overview_bar h2 {
     margin: 20px;
     font-size: 20px;
     display: inline-block;
-    margin-top: 0px;
+    margin-top: 10px;
 }
 
 .overview_bar a {
@@ -18,10 +20,10 @@
 
 .widget_panel {
     min-height: 260px;
-    border-radius: 10px;
-    border: 2px solid #E1E1E1;
+    border-radius: 20px;
+    border: 2px solid #E9E9E9;
     background-color: #FFF;
-    padding: 10px;
+    padding: 20px;
     margin: 0 1em;
 }
 
@@ -30,8 +32,8 @@
 }
 
 .widget_header h3 {
-    color: gray;
-    font-size: 20px;
+    color: #4B4B4B;
+    font-size: 22px;
 }
 
 .top_widget_panel {
@@ -44,4 +46,22 @@
 
 .transaction_history {
     min-height: 406px;
+}
+
+.amount_remaining {
+    font-size: 16px;
+}
+
+.amount_remaining::before {
+    content: "Remaining: $";
+}
+
+.budget_left {
+    width: 50%;
+    float: left;
+}
+
+.budget_right {
+    width: 50%;
+    float: left;
 }
