@@ -1,9 +1,11 @@
 import React from 'react';
+import { useState } from 'react';
 import { Link as PageLink } from 'react-router-dom';
 import Transaction from './Transaction';
 import '../styles/Dashboard.css'
 import { PieChart, Pie, Tooltip } from 'recharts';
 import BudgetItem from '../MojitoComponents/BudgetItem';
+import { Modal, Button } from 'react-bootstrap';
 
 const Dashboard = () => {
   const data = [
@@ -11,6 +13,11 @@ const Dashboard = () => {
     {name: "Instagram", value: 30000},
     {name: "Yup", value: 250000}
   ]
+
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
 
   return <div className='dashboard main_content'>
     <div className='overview_bar'>
@@ -88,15 +95,34 @@ const Dashboard = () => {
     <div className="col-4" style={{float: "left"}}>
         <PageLink className='widget_header' to= '/transaction_history'>
               <div className='widget_panel transaction_history'>
-                <h3>Transaction History</h3>
+                <h3 style={{float: "left"}}>Transaction History</h3>
 
-                <div style={{width: "100%", marginTop: "20px"}}>
+                <Button variant="success" onClick={handleShow} style={{float: "right", marginTop: "-6px"}}>
+                  +
+                </Button>
+
+                <Modal show={show} onHide={handleClose}>
+                  <Modal.Header closeButton>
+                    <Modal.Title>Modal heading</Modal.Title>
+                  </Modal.Header>
+                  <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
+                  <Modal.Footer>
+                    <Button variant="secondary" onClick={handleClose}>
+                      Close
+                    </Button>
+                    <Button variant="primary" onClick={handleClose}>
+                      Save Changes
+                    </Button>
+                  </Modal.Footer>
+                </Modal>
+
+                <div style={{width: "100%", marginTop: "60px"}}>
                 <p style={{float: "left", paddingLeft: "0px", color: "#9A9A9A"}}>Category:</p>
                   <p style={{float: "left", paddingLeft: "120px", color: "#9A9A9A"}}>Type:</p>
                   <p style={{float: "right", paddingRight: "40px", color: "#9A9A9A"}}>Price:</p>
                 </div>
 
-                <div style={{marginTop: "60px", float: "clear"}}>
+                <div style={{marginTop: "100px", float: "clear"}}>
 
                 </div>
 
