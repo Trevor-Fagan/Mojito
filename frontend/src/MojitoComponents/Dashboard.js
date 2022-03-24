@@ -89,13 +89,24 @@ const Dashboard = () => {
         <PageLink className='widget_header' to= '/transaction_history'>
               <div className='widget_panel transaction_history'>
                 <h3>Transaction History</h3>
-                <Transaction />
-                <Transaction />
-                <Transaction />
-                <Transaction />
-                <Transaction />
-                <Transaction />
-                <Transaction />
+
+                <div style={{width: "100%", marginTop: "20px"}}>
+                <p style={{float: "left", paddingLeft: "0px", color: "#9A9A9A"}}>Category:</p>
+                  <p style={{float: "left", paddingLeft: "120px", color: "#9A9A9A"}}>Type:</p>
+                  <p style={{float: "right", paddingRight: "40px", color: "#9A9A9A"}}>Price:</p>
+                </div>
+
+                <div style={{marginTop: "60px", float: "clear"}}>
+
+                </div>
+
+                <Transaction title="AMZ Purchase #428092" price="5.73" date="May 23rd" category="entertainment" />
+                <Transaction title="TARGET 103 #523" price="5.73" date="May 27th" category="finance" />
+                <Transaction title="AMZ Purchase #428092" price="5.73" date="May 23rd" category="food" />
+                <Transaction title="AMZ Purchase #428092" price="5.73" date="May 23rd" category="finance" />
+                <Transaction title="AMZ Purchase #428092" price="5.73" date="May 23rd" category="entertainment" />
+                <Transaction title="AMZ Purchase #428092" price="5.73" date="May 23rd" category="food" />
+                <Transaction title="AMZ Purchase #428092" price="5.73" date="May 23rd" category="food" />
               </div>
         </PageLink>
     </div>

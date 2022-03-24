@@ -1,24 +1,36 @@
 import React from 'react';
 import '../styles/TransactionHistory.css';
 import FoodTransactionIcon from '../images/food.png';
+import StatisticsIcon from '../images/stats.png';
+import EntertainmentIcon from '../images/art.png';
 
-const Transaction = () => {
+function categoryImage (category) {
+  if (category === "entertainment") {
+    return EntertainmentIcon;
+  } else if (category === "finance") {
+    return StatisticsIcon;
+  } else if (category === "food") {
+    return FoodTransactionIcon;
+  }
+}
+
+const Transaction = (props) => {
   return <div className='transaction_container'>
       <div className='img_container'>
-        <img style={{width: '70px', height: 'auto'}} src={FoodTransactionIcon} alt='transaction' />
+        <img style={{width: '70px', height: 'auto'}} src={categoryImage(props.category)} alt='transaction' />
       </div>
 
       <div className='transaction_text_container'>
           <div className='transaction_name'>
-              <p>AMZ Purchase *420AGSJ4</p>
+              <p>{props.title}</p>
           </div>
           <div className='transaction_date'>
-              <p>January 28th</p>
+              <p>{props.date}</p>
           </div>
       </div>
 
       <div className='transaction_amount'>
-        <p>$5.73</p>
+        <p>${props.price}</p>
       </div>
   </div>;
 };
