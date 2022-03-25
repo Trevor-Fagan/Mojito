@@ -12,6 +12,37 @@ const APP_PORT = process.env.APP_PORT || 8000;
 const PLAID_CLIENT_ID = process.env.PLAID_CLIENT_ID;
 const PLAID_SECRET = process.env.PLAID_SECRET;
 const PLAID_ENV = process.env.PLAID_ENV || 'sandbox';
+const app = express();
+
+
+// connect to your database
+var mysql = require('mysql')
+var the_data = "";
+
+var connection = mysql.createConnection({
+  host: 'mojito.ch7hznxwzh2j.us-east-1.rds.amazonaws.com',
+  user: 'admin',
+  password: 'Spiderman7',
+  database: 'Mojito_Testing'
+})
+
+connection.connect(function(err) {
+  if (err) throw err
+  console.log('You are now connected...')
+
+  // ADD NEW USER TO DB
+  // connection.query("INSERT INTO Users (LastName, FirstName) VALUES ('Palmer', 'Dori')", function (err, result) {
+  //   if (err) throw err;
+  //   console.log("Result: " + result);
+  // });
+
+  // RETURNS ALL USERS IN DB
+  connection.query("SELECT * FROM Users", function (err, result) {
+    if (err) throw err;
+    console.log("Result: " + result);
+    the_data = result;
+  });
+})
 
 // PLAID_PRODUCTS is a comma-separated list of products to use when initializing
 // Link. Note that this list must contain 'assets' in order for the app to be
@@ -69,7 +100,6 @@ const configuration = new Configuration({
 
 const client = new PlaidApi(configuration);
 
-const app = express();
 app.use(
   bodyParser.urlencoded({
     extended: false,
