@@ -1,8 +1,8 @@
 import React from 'react';
 import '../styles/TransactionHistory.css';
-import FoodTransactionIcon from '../images/food.png';
-import StatisticsIcon from '../images/stats.png';
-import EntertainmentIcon from '../images/art.png';
+import FoodTransactionIcon from '../images/food4.png';
+import StatisticsIcon from '../images/rent(blue).png';
+import EntertainmentIcon from '../images/misc.png';
 
 function categoryImage (category) {
   if (category === "entertainment") {
