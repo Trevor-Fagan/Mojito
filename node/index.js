@@ -469,11 +469,6 @@ const prettyPrintResponse = (response) => {
   console.log(util.inspect(response.data, { colors: true, depth: 4 }));
 };
 
-// This is a helper function to poll for the completion of an Asset Report and
-// then send it in the response to the client. Alternatively, you can provide a
-// webhook in the `options` object in your `/asset_report/create` request to be
-// notified when the Asset Report is finished being generated.
-
 const getAssetReportWithRetries = (
   plaidClient,
   asset_report_token,
