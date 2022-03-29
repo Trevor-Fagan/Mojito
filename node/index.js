@@ -39,7 +39,7 @@ connection.connect(function(err) {
   // RETURNS ALL USERS IN DB
   connection.query("SELECT * FROM Users", function (err, result) {
     if (err) throw err;
-    console.log("Result: " + result);
+    console.log("Result: " + result[0]);
     the_data = result;
   });
 })
