@@ -39,7 +39,7 @@ connection.connect(function(err) {
   // RETURNS ALL USERS IN DB
   connection.query("SELECT * FROM Users", function (err, result) {
     if (err) throw err;
-    console.log("Result: " + result);
+    console.log("Result: " + result[0]);
     the_data = result;
   });
 })
@@ -468,11 +468,6 @@ const server = app.listen(APP_PORT, function () {
 const prettyPrintResponse = (response) => {
   console.log(util.inspect(response.data, { colors: true, depth: 4 }));
 };
-
-// This is a helper function to poll for the completion of an Asset Report and
-// then send it in the response to the client. Alternatively, you can provide a
-// webhook in the `options` object in your `/asset_report/create` request to be
-// notified when the Asset Report is finished being generated.
 
 const getAssetReportWithRetries = (
   plaidClient,
