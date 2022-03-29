@@ -42,6 +42,7 @@
 
 .your_budget {
     min-height: 445px;
+    color: black;
 }
 
 .transaction_history {
@@ -49,7 +50,8 @@
 }
 
 .amount_remaining {
-    font-size: 16px;
+    font-size: 18px;
+    margin-top: 20px;
 }
 
 .amount_remaining::before {

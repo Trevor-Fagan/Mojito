@@ -31,16 +31,37 @@ const Dashboard = () => {
                 <h3>Your Budget</h3>
 
                 <div className="budget_left">
-                  <h4 className="amount_remaining">2000</h4>  
+                  <h4 className="amount_remaining" style={{color: "green"}}>2000</h4>  
+
+                  <PieChart width={300} height={300}>
+                      <Pie
+                        dataKey="value"
+                        isAnimationActive={false}
+                        data={data}
+                        cx={210}
+                        cy={140}
+                        outerRadius={80}
+                        fill="#8884d8"
+                        label
+                      />
+                      <Tooltip />
+                    </PieChart>
                 </div>
 
                 <div className="budget_right">
-                  <BudgetItem />
-                  <BudgetItem />
-                  <BudgetItem />
-                  <BudgetItem />
-                  <BudgetItem />
-                  <BudgetItem />
+                  <div>
+                  Category:  <span style={{float: "right", marginRight: "20px"}}>Amount:</span>
+                  </div>
+
+                  <div style={{marginTop: "20px"}}>
+                    <BudgetItem />
+                    <BudgetItem />
+                    <BudgetItem />
+                    <BudgetItem />
+                    <BudgetItem />
+                    <BudgetItem />
+                    <BudgetItem />
+                  </div>
                 </div>
         
               </div>

@@ -6,7 +6,7 @@ const MyAccount = () => {
   const { user, isAuthenticated } = useAuth0();
 
   return (
-    <div className="main_content">
+    <div className="main_content" style={{textAlign: "center"}}>
       <Card style={{ width: "36rem"}}>
         <Card.Body>
           <Card.Title>Account Information</Card.Title>

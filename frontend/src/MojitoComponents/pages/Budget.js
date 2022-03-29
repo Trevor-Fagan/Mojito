@@ -1,5 +1,8 @@
 import React from 'react';
 import { PieChart, Pie, Tooltip } from 'recharts';
+import { Card } from "react-bootstrap";
+import "../../App.css";
+import BudgetItem from '../BudgetItem';
 
 const Budget = () => {
 
@@ -10,21 +13,41 @@ const Budget = () => {
   ]
 
   return <div className="main_content">
-    Budget
+    <div className = 'page_header'>Budget</div>
 
-      <PieChart width={400} height={400}>
+    <Card style={{ width: "49%", minHeight: "800px", float: "left"}}>
+      <Card.Body>
+        <Card.Title>Your Budget</Card.Title>
+        <Card.Text>
+          <BudgetItem />
+          <BudgetItem />
+          <BudgetItem />
+          <BudgetItem />
+          <BudgetItem />
+          <BudgetItem />
+          <BudgetItem />
+          <BudgetItem />
+          <BudgetItem />
+          <BudgetItem />
+        </Card.Text>
+      </Card.Body>
+    </Card>
+
+    <div style={{width: "49%", float: "left", marginLeft: "2%"}}>
+      <PieChart PieChart width={800} height={800}>
           <Pie
             dataKey="value"
             isAnimationActive={false}
             data={data}
-            cx={200}
-            cy={200}
-            outerRadius={80}
+            cx={370}
+            cy={400}
+            outerRadius={220}
             fill="#8884d8"
             label
           />
           <Tooltip />
       </PieChart>
+    </div>
 
   </div>;
 };
