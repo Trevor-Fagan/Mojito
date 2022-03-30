@@ -5,13 +5,17 @@ import { Card } from "react-bootstrap";
 class MyAccount extends React.Component {
   constructor(props) {
     super(props);
-    this.state={apiResponse: ""}
+    this.state={apiResponse: "", secondResponse: ""}
   }
 
   callAPI () {
-    fetch("http://localhost:8000/trevor/rock")
+    fetch("http://localhost:8000/backend/budget")
       .then(res => res.text())
-      .then(res => this.setState({apiResponse: res}))
+      .then(res => this.setState({apiResponse: JSON.parse(res)}))
+    
+    fetch("http://localhost:8000/backend/user")
+      .then(res => res.text())
+      .then(res => this.setState({secondResponse: JSON.parse(res)}))
   }
 
   componentWillMount () {
@@ -36,13 +40,13 @@ class MyAccount extends React.Component {
               src={user.picture}
             /> */}
             <Card.Text className="display-6">
-              First Name: {/*user.given_name*/}
+              First Name: {this.state.secondResponse.FirstName}
               <br></br>
-              Last Name: {/*user.family_name*/}
+              Last Name: {this.state.secondResponse.LastName}
               <br></br>
-              Email: {/*user.email*/}
+              Email: {this.state.secondResponse.Email}
               <br></br>
-              Here: {this.state.apiResponse}
+              Id: {this.state.apiResponse.Id}
             </Card.Text>
           </Card.Body>
         </Card>

@@ -33,23 +33,38 @@ connection.connect(function(err) {
   console.log('You are now connected...')
 
   // ADD NEW USER TO DB
-  // connection.query("INSERT INTO Users (LastName, FirstName) VALUES ('Palmer', 'Dori')", function (err, result) {
+  // connection.query("INSERT INTO Budget VALUES (5203920592, 900, 200, 23, 42, 5342, 234, 4)", function (err, result) {
   //   if (err) throw err;
   //   console.log("Result: " + result);
   // });
 
+  // connection.query("INSERT INTO Users VALUES (5203920592, 'Palmer', 'Dori', 'theEmail@gmail.com')", function (err, result) {
+  //   if (err) throw err;
+  //   console.log("Result: " + result);
+  // });
+  // END ADD NEW USER TO DB
+
+
   // RETURNS ALL USERS IN DB
-  connection.query("SELECT * FROM Users", function (err, result) {
-    if (err) throw err;
-    console.log("Result: " + result[0]);
-    the_data = result;
-  });
+  // connection.query("SELECT * FROM Users", function (err, result) {
+  //   if (err) throw err;
+  //   console.log("Result: " + result[0]);
+  //   the_data = result;
+  // });
 })
 
-app.get('/trevor/rock', (req, res) => {
+app.get('/backend/budget', (req, res) => {
+  connection.query("SELECT * FROM Budget", function (err, result) {
+    if (err) throw err;
+    res.send({Id: result[0]["Id"], Housing: result[0]["Housing"], Entertainment: result[0]["Entertainment"], Vacation: result[0]["Vacation"],
+              Car: result[0]["Car"], Clothing: result[0]["Clothing"], Misc: result[0]["Entertainment"]});
+  });
+});
+
+app.get('/backend/user', (req, res) => {
   connection.query("SELECT * FROM Users", function (err, result) {
     if (err) throw err;
-    res.send(result[0]["Id"]);
+    res.send({Id: result[0]["Id"], LastName: result[0]["LastName"], FirstName: result[0]["FirstName"], Email: result[0]["Email"]});
   });
 });
 
