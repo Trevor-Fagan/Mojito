@@ -57,7 +57,7 @@ app.get('/backend/budget', (req, res) => {
   connection.query("SELECT * FROM Budget", function (err, result) {
     if (err) throw err;
     res.send({Id: result[0]["Id"], Housing: result[0]["Housing"], Entertainment: result[0]["Entertainment"], Vacation: result[0]["Vacation"],
-              Car: result[0]["Car"], Clothing: result[0]["Clothing"], Misc: result[0]["Entertainment"]});
+              Car: result[0]["Car"], Clothing: result[0]["Clothing"], Misc: result[0]["Entertainment"], Income: result[0]["Income"]});
   });
 });
 

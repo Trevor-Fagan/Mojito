@@ -4,8 +4,27 @@ import { Card } from "react-bootstrap";
 import "../../App.css";
 import BudgetItem from '../BudgetItem';
 
-const Budget = () => {
+class Budget extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state={apiResponse: "", secondResponse: ""}
+  }
 
+  callAPI () {
+    fetch("http://localhost:8000/backend/budget")
+      .then(res => res.text())
+      .then(res => this.setState({apiResponse: JSON.parse(res)}))
+    
+    fetch("http://localhost:8000/backend/user")
+      .then(res => res.text())
+      .then(res => this.setState({secondResponse: JSON.parse(res)}))
+  }
+
+  componentWillMount () {
+    this.callAPI();
+  }
+
+  render() {
   const data = [
     {name: "Facebook", value: 200000},
     {name: "Instagram", value: 30000},
@@ -19,16 +38,13 @@ const Budget = () => {
       <Card.Body>
         <Card.Title>Your Budget</Card.Title>
         <Card.Text>
-          <BudgetItem />
-          <BudgetItem />
-          <BudgetItem />
-          <BudgetItem />
-          <BudgetItem />
-          <BudgetItem />
-          <BudgetItem />
-          <BudgetItem />
-          <BudgetItem />
-          <BudgetItem />
+          <BudgetItem category="Housing" amount={this.state.apiResponse.Housing} />
+          <BudgetItem category="Entertainment" amount={this.state.apiResponse.Entertainment} />
+          <BudgetItem category="Vacation" amount={this.state.apiResponse.Vacation} />
+          <BudgetItem category="Car" amount={this.state.apiResponse.Car} />
+          <BudgetItem category="Clothing" amount={this.state.apiResponse.Clothing} />
+          <BudgetItem category="Misc" amount={this.state.apiResponse.Misc}/>
+          <BudgetItem category="Income" amount={this.state.apiResponse.Income} />
         </Card.Text>
       </Card.Body>
     </Card>
@@ -50,6 +66,7 @@ const Budget = () => {
     </div>
 
   </div>;
+  }
 };
 
 export default Budget;
