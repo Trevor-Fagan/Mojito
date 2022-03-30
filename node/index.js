@@ -7,12 +7,14 @@ const util = require('util');
 const express = require('express');
 const bodyParser = require('body-parser');
 const moment = require('moment');
+const cors = require('cors');
 
 const APP_PORT = process.env.APP_PORT || 8000;
 const PLAID_CLIENT_ID = process.env.PLAID_CLIENT_ID;
 const PLAID_SECRET = process.env.PLAID_SECRET;
 const PLAID_ENV = process.env.PLAID_ENV || 'sandbox';
 const app = express();
+app.use(cors());
 
 
 // connect to your database
@@ -43,6 +45,13 @@ connection.connect(function(err) {
     the_data = result;
   });
 })
+
+app.get('/trevor/rock', (req, res) => {
+  connection.query("SELECT * FROM Users", function (err, result) {
+    if (err) throw err;
+    res.send(result[0]["Id"]);
+  });
+});
 
 // PLAID_PRODUCTS is a comma-separated list of products to use when initializing
 // Link. Note that this list must contain 'assets' in order for the app to be
