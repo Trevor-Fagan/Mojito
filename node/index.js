@@ -17,7 +17,6 @@ const app = express();
 
 // connect to your database
 var mysql = require('mysql')
-var the_data = "";
 
 var connection = mysql.createConnection({
   host: 'mojito.ch7hznxwzh2j.us-east-1.rds.amazonaws.com',
@@ -31,18 +30,28 @@ connection.connect(function(err) {
   console.log('You are now connected...')
 
   // ADD NEW USER TO DB
-  // connection.query("INSERT INTO Users (LastName, FirstName) VALUES ('Palmer', 'Dori')", function (err, result) {
+  // connection.query("INSERT INTO Users VALUES ('5382905', 'Palmer', 'Dori', 'doripalmer@gmail.com')", function (err, result) {
   //   if (err) throw err;
   //   console.log("Result: " + result);
   // });
 
   // RETURNS ALL USERS IN DB
+  // connection.query("SELECT * FROM Users", function (err, result) {
+  //   if (err) throw err;
+  //   console.log("Result: " + result[0]);
+  // });
+})
+
+// ENDPOINT FOR GETTING DATABASE INFO
+app.get('/trevor/rock', function (req, res) {
+  // RETURNS ALL USERS IN DB
   connection.query("SELECT * FROM Users", function (err, result) {
     if (err) throw err;
-    console.log("Result: " + result[0]);
-    the_data = result;
+    //console.log("Result: " + result[0]["Id"]);
   });
-})
+  res.send("Hey")
+});
+
 
 // PLAID_PRODUCTS is a comma-separated list of products to use when initializing
 // Link. Note that this list must contain 'assets' in order for the app to be
@@ -106,6 +115,7 @@ app.use(
   }),
 );
 app.use(bodyParser.json());
+
 
 app.post('/api/info', function (request, response, next) {
   response.json({
