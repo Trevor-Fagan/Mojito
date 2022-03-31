@@ -54,7 +54,7 @@ connection.connect(function (err) {
 app.get("/backend/budget", (req, res) => {
   connection.query("SELECT * FROM Budget", function (err, result) {
     if (err) throw err;
-    res.send({
+    result = {
       Id: result[0]["Id"],
       Housing: result[0]["Housing"],
       Entertainment: result[0]["Entertainment"],
@@ -62,7 +62,9 @@ app.get("/backend/budget", (req, res) => {
       Car: result[0]["Car"],
       Clothing: result[0]["Clothing"],
       Misc: result[0]["Entertainment"],
-    });
+    };
+    console.log(result);
+    res.send(result);
   });
 });
 
@@ -600,3 +602,5 @@ const authorizeAndCreateTransfer = async (accessToken) => {
   prettyPrintResponse(transferResponse);
   return transferResponse.data.transfer.id;
 };
+
+module.exports = app;
