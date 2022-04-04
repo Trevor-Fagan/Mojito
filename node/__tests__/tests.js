@@ -39,6 +39,28 @@ describe("hitting /backend/user endpoint", () => {
     expect(res.body.Id).toEqual("123456789");
     expect(res.body.LastName).toEqual("Fagan");
     expect(res.body.FirstName).toEqual("Trevor");
-    expect(res.body.Email).toEqual('trevorfagan77@gmail.com');
+    expect(res.body.Email).toEqual("trevorfagan77@gmail.com");
+  });
+});
+
+describe("POST /api/info endpoint", () => {
+  it("should return a 200 response", async () => {
+    const res = await request(server).post("/api/info");
+    // console.log(res.body);
+    expect(res.body.item_id).toEqual(null);
+    expect(res.body.access_token).toEqual(null);
+    expect(typeof res.body.products).toEqual("object");
+    expect(res.status).toEqual(200);
+  });
+});
+
+describe("POST /api/create_link_token", () => {
+  it("Check types for response body", async () => {
+    const res = await request(server).post("/api/create_link_token");
+    console.log(res.body);
+    expect(typeof res.body.expiration).toEqual("string");
+    expect(typeof res.body.link_token).toEqual("string");
+    expect(typeof res.body.request_id).toEqual("string");
+    expect(res.status).toEqual(200);
   });
 });
