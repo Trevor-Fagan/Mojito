@@ -44,7 +44,7 @@ describe("hitting /backend/user endpoint", () => {
 });
 
 describe("POST /api/info endpoint", () => {
-  it("should return a 200 response", async () => {
+  it("check types for response body", async () => {
     const res = await request(server).post("/api/info");
     // console.log(res.body);
     expect(res.body.item_id).toEqual(null);
