@@ -1,6 +1,6 @@
 import React from 'react';
 import { PieChart, Pie, Tooltip } from 'recharts';
-import { Card } from "react-bootstrap";
+import { Button, Card } from "react-bootstrap";
 import "../../App.css";
 import BudgetItem from '../BudgetItem';
 
@@ -22,6 +22,7 @@ class Budget extends React.Component {
 
   componentWillMount () {
     this.callAPI();
+    console.log(this.callAPI());
   }
 
   render() {
@@ -37,6 +38,7 @@ class Budget extends React.Component {
     <Card style={{ width: "49%", minHeight: "800px", float: "left"}}>
       <Card.Body>
         <Card.Title>Your Budget</Card.Title>
+        <Button className='btn btn-success'>Save</Button>
         <Card.Text>
           <BudgetItem category="Housing" amount={this.state.apiResponse.Housing} />
           <BudgetItem category="Entertainment" amount={this.state.apiResponse.Entertainment} />
